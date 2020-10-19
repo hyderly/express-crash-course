@@ -8,12 +8,19 @@ const app = express();
 // initialize middleware
 // app.use(logger);
 
+// Body parser Middleware
+app.use(express.json());
+app.use(express.urlencoded({extended: false}));
+
 // Set Static Folder
 app.use(express.static(path.join(__dirname, "public")));
 
 // Members API Routes
 app.use("/api/members", require("./routes/api/members"));
 
+
+
+
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => console.log(`App is running at localhost:${PORT}`));
+app.listen(PORT, () => console.log(`App is running at http://localhost:${PORT}`));
