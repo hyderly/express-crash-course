@@ -2,7 +2,7 @@
 const members = [
   {
     id: 1,
-    name: "admin",
+    name: "Admin",
     email: "admin@example.com",
     role: "Admin",
   },

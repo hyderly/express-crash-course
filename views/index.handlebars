@@ -1,0 +1,9 @@
+<h1 class="text-center text-primary mt-4">{{title}}</h1>
+<div class="container">
+    <h4>Members data:</h4>
+    <ul class="list-group">
+        {{#each members}}
+        <li class="list-group-item">{{this.name}}: {{this.email}}</li>
+        {{/each}}
+    </ul>
+</div>
