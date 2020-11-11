@@ -1,0 +1,8 @@
+<h1 class="text-center mt-4">{{title}}</h1>
+<div class="container">
+    {{#each members}}
+    <ul class="list-group">
+        <li class="list-group-item">{{this.name}}: {{this.email}}</li>
+    </ul>
+    {{/each}}
+</div>
