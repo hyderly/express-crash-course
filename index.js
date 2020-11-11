@@ -1,12 +1,9 @@
 const express = require("express");
 const path = require("path");
 const exphbs = require("express-handlebars");
-<<<<<<< HEAD
 
 const members = require("./Members");
 
-=======
->>>>>>> e65c8530955aded15a5e28be0937b738849593ba
 const logger = require("./middleware/logger");
 
 const members = require("./Members");

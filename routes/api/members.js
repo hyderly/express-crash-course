@@ -42,7 +42,6 @@ router.post("/", (req, res) => {
   res.json(members);
 });
 
-<<<<<<< HEAD
 
 // Update member
 router.put("/:id", (req, res) => {
@@ -74,41 +73,6 @@ router.delete("/:id", (req, res) => {
     res.status(400).json(`User with id ${req.params.id} not Found`);
   }
 })
-=======
-// Updtae Member  (Update)
-router.put("/:id", (req, res) => {
-  const found = members.some((member) => member.id === +req.params.id);
-
-  if (found) {
-    const newMember = req.body;
-    members.forEach((member) => {
-      if (member.id === +req.params.id) {
-        member.name = newMember.name ? newMember.name : member.name;
-        member.email = newMember.email ? newMember.email : member.email;
-        member.role = newMember.role ? newMember.role : member.role;
-
-        res.json(`User ${member.name} is successfully update`, member);
-      }
-    });
-  } else {
-    res.status(404).json(`Member with id ${req.params.id} is not found`);
-  }
-});
-
-// Delete Members  (Delete)
-router.delete("/:id", (req, res) => {
-  const found = members.some((member) => member.id === +req.params.id);
-
-  if (found) {
-    res.json({
-      msg: "User deleted",
-      members: members.filter((member) => member.id !== +req.params.id),
-    });
-  } else {
-    res.json(`User not found with id ${req.params.id}`);
-  }
-});
->>>>>>> e65c8530955aded15a5e28be0937b738849593ba
 
 
 module.exports = router;
